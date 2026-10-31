@@ -27,3 +27,7 @@ div#fumo_chart {
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+
+.overflow {
+    overflow-x: auto;
+}
