@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="season-fall">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://db.onlinewebfonts.com/c/a56f956c8246b0f4dd0c5b24fce859f1?family=DFPPOPCorn-W12"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/theme/fall.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <title>About</title>
+</head>
+
+<body>
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme-season');
+            if (saved) {
+                document.documentElement.className = 'season-' + saved;
+            }
+        })();
+    </script>
+
+
+    <nav>
+        <div id="nav" class="layout">
+            <div class="nav-left">
+                <strong href="/">Home</strong> |
+                <a href="/assets/files/resume.pdf">Resume</a> |
+                <a href="/other">Other</a>
+            </div>
+            <div id="theme-switcher" class="nav-right">
+
+                <button class="theme-btn theme-spring" data-label="Spring"></button>
+                <button class="theme-btn theme-summer" data-label="Summer"></button>
+                <button class="theme-btn theme-fall" data-label="Fall"></button>
+                <button class="theme-btn theme-winter" data-label="Winter"></button>
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="layout-content" class="layout">
+            <h1>Ethan's Homepage</h1>
+
+            <p>
+                Hello and thanks for checking page out!
+            </p>
+            <p>
+                I enjoy studying and looking at how systems are held together, security
+                and networking as well data science. Outside of pure computing science
+                courses, I enjoy taking astrophysics and biology courses that apply some
+                computational techniques that happen to be fields I find interesting.
+            </p>
+            <p>
+                I also keep a little <a href="/homelab">homelab</a> where I can run
+                experiments with networking, web hosting and anything that catches my
+                interest.
+            </p>
+
+            <p>
+                For non tech related stuff, I enjoy F1 and taking long hikes. 
+                The backgrounds
+            </p>
+
+            <h2>Contact</h2>
+            <b>Email: </b><a href="mailto:egb5@sfu.ca">egb5@sfu.ca</a><br>
+            <b>Linkedin: </b><a href="https://www.linkedin.com/in/ethan-bautista-253471376/"
+                target="_blank">linkedin.com/in/ethan-bautista-253471376/</a>
+
+            <div id="credits">
+                <p class="credits">© 2026 Ethan Bautista - <a href="/credits">Credits</a></p>
+            </div>
+
+            <!-- <p class="credits">credits</p> -->
+        </div>
+    </main>
+
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <img src="/assets/theme/fall-0.png" height="50">
+            <h1 class="marquee-title">Ethan Bautista</h1>
+            <img src="/assets/theme/fall-1.png" height="50">
+        </div>
+    </div>
+
+
+    <script src="/assets/js/theme-picker.js"></script>
+</body>
+
+</html>
