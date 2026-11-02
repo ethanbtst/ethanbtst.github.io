@@ -6,13 +6,17 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', function () { setTheme(btn.dataset.label.toLowerCase()); });
     });
 
+    function updateFavicon(season) {
+        var favlink = document.querySelector("link[rel='shortcut icon']");
+        if (favlink) favlink.href = '/assets/theme/' + season + '.ico';
+    }
+
     function setTheme(season) {
         document.documentElement.className = 'season-' + season;
         try { localStorage.setItem('theme-season', season); } catch (e) {}
 
         // Update favicon
-        var favlink = document.querySelector("link[rel='shortcut icon']");
-        if (favlink) favlink.href = '/assets/theme/' + season + '.ico';
+        updateFavicon(season);
 
         // Update marquee images
         var leftImg = document.getElementById('marquee-left');
@@ -28,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize active button to match current HTML class
     var current = document.documentElement.className.match(/season-(\w+)/);
     if (current) {
+        updateFavicon(current[1]);
         var btn = switcher.querySelector('.theme-' + current[1]);
         if (btn) btn.classList.add('active');
     }
