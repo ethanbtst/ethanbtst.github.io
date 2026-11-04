@@ -2,10 +2,7 @@
   font-family:DFPPOPCorn-W12;
   font-style:normal;
   font-display:swap;
-  src:local("Open Sans Light "),
-  local("Open Sans-Light"),
-  url(/assets/css/DFP-PopCorn-W12-DKEJT.woff) format("woff2"),
-  url(/assets/css/DFP-PopCorn-W12-DKEJT.woff) format("woff")
+  src:url(/assets/css/DFP-PopCorn-W12-DKEJT.woff) format("woff")
 }
 
 :root {
