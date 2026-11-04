@@ -1,0 +1,106 @@
+/* Spring theme */
+html.season-spring {
+    --header-color: #0b3d1a;
+    --menu-color: #0a4623eb;
+    --bg-color: #145a2da6;
+
+    --menu-category-color: #86efac;
+    --menu-current-color: #4ade80;
+    --menu-item-color: #bbf7d0;
+    --menu-link-hover: #fb7185;
+
+    --content-bg: #0a3214d9;
+    --content-text: #dcfce7;
+    --content-link: #4ade80;
+    --border-color: #86efac26;
+}
+
+/* Summer theme */
+html.season-summer {
+    --header-color: #0c2d5e;
+    --menu-color: #0a2d5aeb;
+    --bg-color: #0f3c78b3;
+
+    --menu-category-color: #fde68a;
+    --menu-current-color: #fbbf24;
+    --menu-item-color: #fef3c7;
+    --menu-link-hover: #fb923c;
+
+    --content-bg: #0a234bd9;
+    --content-text: #fef3c7;
+    --content-link: #fbbf24;
+    --border-color: #fde68a26;
+}
+
+/* Fall theme */
+html.season-fall {
+    --header-color: #3d1f0b;
+    --menu-color: #3c1e0aeb;
+    --bg-color: #50280fb3;
+
+    --menu-category-color: #fdba74;
+    --menu-current-color: #fb923c;
+    --menu-item-color: #fed7aa;
+    --menu-link-hover: #ef4444;
+
+    --content-bg: #321908d9;
+    --content-text: #fed7aa;
+    --content-link: #fb923c;
+    --border-color: #fdba7426;
+}
+
+/* Winter theme */
+html.season-winter {
+    --header-color: #0f1a2e;
+    --menu-color: #0f1e3ceb;
+    --bg-color: #142850bf;
+
+    --menu-category-color: #93c5fd;
+    --menu-current-color: #60a5fa;
+    --menu-item-color: #cbd5e1;
+    --menu-link-hover: #f472b6;
+
+    --content-bg: #0f1428d9;
+    --content-text: #e2e8f0;
+    --content-link: #60a5fa;
+    --border-color: #94a3b833;
+}
+
+/* Season-specific backgrounds */
+html.season-spring body { background-image: url("/assets/theme/spring-bg.jpg"); }
+html.season-summer body { background-image: url("/assets/theme/summer-bg.jpg"); }
+html.season-fall   body { background-image: url("/assets/theme/fall-bg.jpg"); }
+html.season-winter body { background-image: url("/assets/theme/winter-bg.jpg"); }
+
+
+#theme-switcher {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: 10px 12px 8px 12px;
+    align-items: center;
+}
+
+.theme-btn {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #ffffff59;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.25);
+    border-color: #ffffffd9;
+}
+
+.theme-btn.active {
+    border-color: #fff;
+    box-shadow: 0 0 6px #ffffff80;
+}
+
+.theme-spring { background: linear-gradient(135deg, #4ade80, #22c55e); }
+.theme-summer { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
+.theme-fall   { background: linear-gradient(135deg, #fb923c, #f97316); }
+.theme-winter { background: linear-gradient(135deg, #a5b4fc, #818cf8); }

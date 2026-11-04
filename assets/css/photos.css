@@ -1,0 +1,20 @@
+div.pic-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.pic-picker {
+  width: 20%;
+  vertical-align: middle;
+  padding: 5px;
+  cursor: pointer;
+}
+
+img#pic-picked {
+  width: 100%;
+}
+
+div.inactive-desc {
+  display: none;
+}

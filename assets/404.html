@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="season-winter">
+
+<head>
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme-season');
+            if (saved) {
+                document.documentElement.className = 'season-' + saved;
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://db.onlinewebfonts.com/c/a56f956c8246b0f4dd0c5b24fce859f1?family=DFPPOPCorn-W12"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/theme/winter.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/404.css">
+    <title>404 - Not Found</title>
+</head>
+
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <p>Oops! This page does not exist.</p>
+        <a href="/">Return Home</a>
+        <div id="theme-switcher">
+            <button class="theme-btn theme-spring" data-label="Spring"></button>
+            <button class="theme-btn theme-summer" data-label="Summer"></button>
+            <button class="theme-btn theme-fall" data-label="Fall"></button>
+            <button class="theme-btn theme-winter" data-label="Winter"></button>
+        </div>
+    </div>
+
+    <img id="bouncing-fumo" src="/assets/images/fumo/fumo_marisa.jpg" alt="bouncing fumo">
+
+    <script src="/assets/js/404.js"></script>
+    <script src="/assets/js/theme-picker.js"></script>
+</body>
+
+</html>
