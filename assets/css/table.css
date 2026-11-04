@@ -1,33 +1,32 @@
+table {
+  margin: auto;
+  text-align: center;
+  color: var(--content-text);
+}
 
-  table {
-    margin: auto;
-    text-align: center;
-    color: var(--content-text);
-  }
+table:not(.noborders),
+table:not(.noborders) tr,
+table:not(.noborders) th,
+table:not(.noborders) td:not(.noborders) {
+  border: 1px solid var(--border-color);
+}
 
-  table:not(.noborders),
-  table:not(.noborders) tr,
-  table:not(.noborders) th,
-  table:not(.noborders) td:not(.noborders) {
-    border: 1px solid var(--border-color);
-  }
-
-  img {
-    padding: 0px;
-    margin-right: 20px;
+img {
+  padding: 0px;
+  margin-right: 20px;
 }
 
 img.fumo {
-    margin: 10px;
+  margin: 10px;
 }
 
 div#fumo_chart {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .overflow {
-    overflow-x: auto;
+  overflow-x: auto;
 }

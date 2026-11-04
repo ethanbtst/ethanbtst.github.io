@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="season-winter">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://db.onlinewebfonts.com/c/a56f956c8246b0f4dd0c5b24fce859f1?family=DFPPOPCorn-W12"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/theme/winter.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/photos.css">
+    <title>Photos</title>
+</head>
+
+<body>
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme-season');
+            if (saved) {
+                document.documentElement.className = 'season-' + saved;
+            }
+        })();
+    </script>
+
+
+    <nav>
+        <div id="nav" class="layout">
+            <div class="nav-left">
+                <a href="/">Home</a> |
+                <a href="/files/resume.pdf">Resume</a> |
+                <a href="/credits.html">Credits</a>
+            </div>
+            <div id="theme-switcher" class="nav-right">
+                <button class="theme-btn theme-spring" data-label="Spring"></button>
+                <button class="theme-btn theme-summer" data-label="Summer"></button>
+                <button class="theme-btn theme-fall" data-label="Fall"></button>
+                <button class="theme-btn theme-winter" data-label="Winter"></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="layout-content" class="layout">
+
+            <h1>Photos</h1>
+            <p>A place to put photos I find interesting</p>
+            <h2>Backgrounds</h2>
+
+            <div class="pic-holder" style="align-items: center;">
+                <img class="pic-picker" alt="spring" src="/assets/theme/spring-bg.jpg" onclick="switchPic(this);">
+                <img class="pic-picker" alt="summer" src="/assets/theme/summer-bg.jpg" onclick="switchPic(this);">
+                <img class="pic-picker" alt="fall" src="/assets/theme/fall-bg.jpg" onclick="switchPic(this);">
+                <img class="pic-picker" alt="winter" src="/assets/theme/winter-bg.jpg" onclick="switchPic(this);">
+            </div>
+
+            <img id="pic-picked" src="/assets/theme/spring-bg.jpg">
+
+            <div id="spring-desc" class="active-desc">
+                <p style="text-align: center;">Spring</p>
+                Taken on a Sony RX100 V at UBC. I wanted to try using my camera
+                more and thought heading out on a nice spring day would be nice.
+            </div>
+
+            <div id="summer-desc" class="inactive-desc">
+                <p style="text-align: center;">Summer</p>
+                Taken on my Samsung S9 while in Hawaii. I was out on a walk 
+                along the coast while my family stayed by the beach.
+            </div>
+
+            <div id="fall-desc" class="inactive-desc">
+                <p style="text-align: center;">Fall</p>
+                Taken on my Samsung J1 outside of my old house. For a 5 MP 
+                camera, I quite like this photo and the colouring between the
+                red and blue of the clouds.
+            </div>
+
+            <div id="winter-desc" class="inactive-desc">
+                <p style="text-align: center;">Winter</p>
+                Taken on my Samsung S9 during a FedEx snowday. While stuck on 
+                the SkyTrain at 6:20 AM I got a call telling me work was cancelled.
+                After that I went for a walk at Rocky Point Park to enjoy the piles 
+                of fresh snow and be the first leave footprints on the trails.
+            </div>
+
+
+
+    </main>
+    <script src="/assets/js/theme-picker.js"></script>
+    <script src="/assets/js/photos.js"></script>
+</body>
+
+</html>
