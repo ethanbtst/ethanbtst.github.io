@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://db.onlinewebfonts.com/c/a56f956c8246b0f4dd0c5b24fce859f1?family=DFPPOPCorn-W12"
-        rel="stylesheet">
     <link rel="shortcut icon" href="/assets/theme/winter.ico">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/theme.css">
@@ -41,99 +39,99 @@
 
     <main>
         <div id="layout-content" class="layout">
-            <h1>Homelab</h1>
-            </header>
-            This is the page for my tiny homelab which
-            happens to host this website, gets used for my university work and many more
-            things.
-            <br>
+            <div class="content">
+                <h1>Homelab</h1>
 
-            <img src="/assets/images/homelab.jpeg" width="100%" />
-            <h2>Hardware</h2>
-            <ul>
-                <li>CPU: Intel i7-11800H (soldered to motherboard)</li>
-                <li>Motherboard: Erying M-ITX B560i</li>
-                <li>GPU: EVGA NVIDIA 3060 Ti FTW3</li>
-                <li>Memory: 2 x 32GB Crucial Pro 3200MHz</li>
-                <li>
-                    Storage:
-                    <ul>
-                        <li>2 x 4 TB WD Red Plus NAS HDD</li>
-                        <li>1 x 1 TB Kingston M.2 SSD</li>
-                        <li>1 x 256 GB Kingston M.2 SSD</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h2>Current Software Setup</h2>
-
-            <h3>Proxmox</h3>
-            <p>
-                Proxmox is the virtualization platform of choice, occupying the 1TB SDD
-                which should be large enough to hold a good number of virtual machines.
-                <br /><br />
-                Proxmox Backup Server is used for taking snapshots of my VMs and backing up
-                the VMs. Not ideal in an ideal spot as PBS is running on the Proxmox machine
-                that it takes the backups of.
-            </p>
-
-            <h3>Truenas</h3>
-
-            NAS software of choice and installed onto the 256GB SSD which then gets passed
-            to the VM in Proxmox. The data vdev consists of the 2 4TB HDDs which are striped
-            (good heavens theres no redundency!) and also passed to the VM by passing the
-            SATA controller to the VM.
-            <br /><br />
-            All useful data is put in its own dataset, may have some form snapshotting and
-            made accessible through NFS and SMB.
-            <br /><br />
-            Truenas was the former hypervisor of choice before I switched to Proxmox. Since
-            it was setup on its own hardware and simply passed through there is always the
-            option to move it back to its dedicated machine.
-
-            <h3>Tailscale</h3>
-            <p>The VPN that easily lets me access what I need</p>
-
-            <h3>Virtual Machines</h3>
-            <ul>
-                <li>Lantern - Arch Linux</li>
-                <p>
-                    The first and most general of the VMs setup. Runs a multitude of things
-                    such as Nextcloud for cloud storage I use for school, Jellyfin for media
-                    streaming, Immich for photo management and more.
-                    <br /><br />
-                    Given the most resources as I use this for some remote work like machine
-                    learning, a shared Jupyter Notebook server and RStudio that need I and
-                    others can use.
+                <p class="centre">
+                    This is the page for my tiny homelab which
+                    happens to host this website, gets used for my university work and many more
+                    things.
                 </p>
+                <br>
 
-                <li>Lighthouse - Debian Forky</li>
-                <p>The networking focused VM that runs</p>
+                <img src="/assets/images/homelab.jpeg" width="90%" style="padding-left: 5%; padding-right: 5%" />
+                <p style="margin-top: 0%;" class="centre">Everything crammed in a Fractal ITX Case</p>
+                <h2>Hardware</h2>
                 <ul>
-                    <li>Pi-hole: Network ad blocker and DNS</li>
-                    <li>Unbound: Recursive DNS resolver</li>
-                    <li>Caddy: Reverse proxy</li>
+                    <li>CPU: Intel i7-11800H (soldered to motherboard)</li>
+                    <li>Motherboard: Erying M-ITX B560i</li>
+                    <li>Memory: 2 x 32GB Crucial Pro 3200MHz</li>
+                    <li>
+                        Storage:
+                        <ul>
+                            <li>2 x 4 TB WD Red Plus NAS HDD</li>
+                            <li>1 x 1 TB Kingston M.2 SSD</li>
+                            <li>1 x 256 GB Kingston M.2 SSD</li>
+                        </ul>
+                    </li>
                 </ul>
 
-                <li>web02 - Debian Forky</li>
-                <p>Current host of this website, not much else</p>
-            </ul>
+                <h2>Current Software Setup</h2>
 
-            <h2>Future Plans</h2>
-            <p>
-                There are a couple things that I would like to improve. I would like to move
-                the networking stuff onto its own machine and I'm aiming to get a Lenovo
-                Thinkstation Tiny that has a PCIe slot, installing a multiport NIC and
-                virtualizing something like pfsense and the existing lighthouse VM.
-                <br /><br />
-                Better backup and more storage as well would be nice to have. Everything
-                lives on a single system and could go up in flames.
-            </p>
-            <div id="credits">
-                <p class="credits">© 2026 Ethan Bautista - <a href="/credits">Credits</a></p>
+                <h3>Proxmox</h3>
+                <p>
+                    Proxmox is the virtualization platform of choice, occupying the 1TB SDD
+                    which should be large enough to hold a good number of virtual machines.
+                    <br /><br />
+                    Proxmox Backup Server is used for taking snapshots of my VMs and backing up
+                    the VMs. Not ideal in an ideal spot as PBS is running on the Proxmox machine
+                    that it takes the backups of.
+                </p>
+
+                <h3>Truenas</h3>
+
+                <p>
+                    NAS software of choice and installed onto the 256GB SSD which then gets passed
+                    to the VM in Proxmox. The data vdev consists of the 2 4TB HDDs which are striped
+                    (good heavens theres no redundency!) and also passed to the VM by passing the
+                    SATA controller to the VM.
+                    <br /><br />
+                    All useful data is put in its own dataset, may have some form snapshotting and
+                    made accessible through NFS and SMB.
+                    <br /><br />
+                    Truenas was the former hypervisor of choice before I switched to Proxmox. Since
+                    it was setup on its own hardware and simply passed through there is always the
+                    option to move it back to its dedicated machine.
+                </p>
+                <h3>Tailscale</h3>
+                <p>The VPN that easily lets me access what I need</p>
+
+                <h3>Virtual Machines</h3>
+                <ul>
+                    <li>Lantern - Arch Linux</li>
+                    <p>
+                        The first and most general of the VMs setup. Runs a multitude of things
+                        such as Nextcloud for cloud storage I use for school, Jellyfin for media
+                        streaming, Immich for photo management and more.
+                        <br /><br />
+                        Given the most resources as I use this for some remote work like machine
+                        learning, a shared Jupyter Notebook server and RStudio that need I and
+                        others can use.
+                    </p>
+
+                    <li>Lighthouse - Debian Forky</li>
+                    <p>The networking focused VM that runs</p>
+                    <ul>
+                        <li>Pi-hole: Network ad blocker and DNS</li>
+                        <li>Unbound: Recursive DNS resolver</li>
+                        <li>Caddy: Reverse proxy</li>
+                    </ul>
+                </ul>
+
+                <h2>Future Plans</h2>
+                <p>
+                    There are a couple things that I would like to improve. I would like to move
+                    the networking stuff onto its own machine and I'm aiming to get a Lenovo
+                    Thinkstation Tiny that has a PCIe slot, installing a multiport NIC and
+                    virtualizing something like pfsense and the existing lighthouse VM.
+                    <br /><br />
+                    Better backup and more storage as well would be nice to have. Everything
+                    lives on a single system and could go up in flames.
+                </p>
+                <div id="credits">
+                    <p class="credits">© 2026 Ethan Bautista - <a href="/credits">Credits</a></p>
+                </div>
             </div>
-
-
         </div>
     </main>
     <script src="/assets/js/theme-picker.js"></script>

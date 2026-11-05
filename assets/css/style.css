@@ -1,3 +1,10 @@
+@font-face {
+  font-family:DFPPOPCorn-W12;
+  font-style:normal;
+  font-display:swap;
+  src:url(/assets/css/DFPPOPCorn-W12.woff) format("woff")
+}
+
 :root {
     /* Default / Winter theme colors */
     --header-color: #0f1a2e;
@@ -41,13 +48,7 @@ body {
     color: var(--content-text);
 }
 
-/* Small screen stuff */
-@media screen and (max-width: 1200px) {
-    .layout {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-}
+
 
 a { color: var(--content-link) }
 a:hover,
@@ -97,6 +98,16 @@ div#layout {
     padding-bottom: 20px;
 }
 
+.centre {
+    text-align: center;
+    padding: 0;
+}
+
+.content {
+    padding-left: 14%;
+    padding-right: 14%;
+}
+
 h1, h2, h3, h4{
     font-family: DFPPOPCorn-W12;
     text-align: center;
@@ -111,4 +122,18 @@ div#credits {
 .credits {
     margin: 0;
     text-decoration: none;
+}
+
+/* Small screen stuff */
+@media screen and (max-width: 1000px) {
+    .layout {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 14px;
+    }
+
+    .content {
+        padding-left: 0%;
+        padding-right: 0%;    
+    }
 }
