@@ -132,6 +132,18 @@ div#credits {
     text-decoration: none;
 }
 
+ul {
+    padding-left: 0px;
+}
+
+ul.inner {
+    padding-left: 5%;
+}
+
+li {
+    margin: 3px;
+}
+
 /* Small screen stuff */
 @media screen and (max-width: 1000px) {
     .layout {
